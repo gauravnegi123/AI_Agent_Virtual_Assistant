@@ -3,12 +3,12 @@ import bg from "../assets/authBg.png"
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
-import {userDataContext} from "../context/userContext"
+import {userDataContext} from "../context/UserContext"
 import axios from 'axios';
 
 function SignIn() {
     const [showPassword, setshowPassword] = useState(false);
-    const {serverUrl}= useContext(userDataContext)
+    const {serverUrl,userData,setUserData}= useContext(userDataContext)
     const navigate= useNavigate()
     const [email, setEmail]= useState("")
     const [loading, setLoading]= useState(false)
@@ -24,11 +24,13 @@ function SignIn() {
                 email,
                 password
             },{withCredentials:true})
-            console.log(result)
+            setUserData(result.data)
             setLoading(false)
+            navigate("/")
         }
         catch(err){
             console.error(err)
+            setUserData(null)
             setErr(err.response.data.message)
             setLoading(false)
         }
