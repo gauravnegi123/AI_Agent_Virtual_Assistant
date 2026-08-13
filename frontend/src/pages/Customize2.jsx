@@ -41,7 +41,7 @@ function Customize2() {
 
     return (
         <div className='w-[full] h-[100vh] bg-gradient-to-t from-[black] to-[#06065c] flex flex-col justify-center items-center p-[20px]'>
-            <MdKeyboardBackspace className='absolute top-[30px] left-[30px] text-white w-[25px] h-[25px] cursor-pointer' onClick={()=>navigate("/")} />
+            <MdKeyboardBackspace className='absolute top-[30px] left-[30px] text-white w-[25px] h-[25px] cursor-pointer' onClick={()=>navigate("/customize")} />
             <h1 className='text-white text-[30px] text-center mb-[40px]'>Enter Your <span className='text-blue-400'>Assistant Name</span></h1>
 
             <input type="text" placeholder='eg:shifra' className='w-full max-w-[600px] h-[60px] outline-none border-2 border-white bg-transparent text-white placeholder-gray-300 px-[20px] py-[10px] rounded-full text-[18px]' required onChange={(e) => setAssistantName(e.target.value)} value={assistantName} />
