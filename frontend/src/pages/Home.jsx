@@ -49,7 +49,7 @@ function Home() {
   const speak = (text) => {
 
     const utterence = new SpeechSynthesisUtterance(text)
-    utterence.lang = "hi-IN";
+    utterence.lang = "en-US";
     const voices = window.speechSynthesis.getVoices();
     const hindiVoice = voices.find(v => v.lang === 'hi-IN');
     if (hindiVoice) {
