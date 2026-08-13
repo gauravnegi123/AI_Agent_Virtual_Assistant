@@ -72,7 +72,7 @@ function Home() {
     speak(response);
 
     if (type === 'google-search') {
-      const query = encodeURIComponent(userinput);
+      const query = encodeURIComponent(userInput);
       window.open(`https://www.google.com/search?q=${query}`, '_blank')
     }
 
@@ -81,12 +81,12 @@ function Home() {
     }
 
     if (type === 'youtube-search') {
-      const query = encodeURIComponent(userinput)
+      const query = encodeURIComponent(userInput)
       window.open(`https://www.youtube.com/results?search_query=${query}`, '_blank')
     }
 
     if (type === 'youtube-play') {
-      const query = encodeURIComponent(userinput)
+      const query = encodeURIComponent(userInput)
       window.open(`https://www.youtube.com/results?search_query=${query}`, '_blank')
     }
 
@@ -107,7 +107,7 @@ function Home() {
     }
 
     if (type === 'wikipedia-search') {
-      const query = encodeURIComponent(userinput)
+      const query = encodeURIComponent(userInput)
       window.open(`https://en.wikipedia.org/wiki/${query}`, '_blank')
     }
 
@@ -208,7 +208,7 @@ function Home() {
     };
 
     const greeting = new SpeechSynthesisUtterance(`Hello ${userData.name}, what can I help you with ?`);
-    greeting.lang ='hi-IN';
+    greeting.lang ='en-US';
     window.speechSynthesis.speak(greeting);
 
     return () => {
@@ -228,7 +228,9 @@ function Home() {
     <div className='w-full h-[100vh] bg-gradient-to-t from-[#000000] to-[#08084e] flex flex-col justify-center items-center gap-[15px]'>
 
       <CgMenuRight className='lg:hidden text-white absolute top-[20px] right-[10px] w-[25px] h-[25px]' onClick={()=>setHam(true)}/>
-      <div className={`absolute lg:hidden left-15 top-0 w-full h-full backdrop-blur-xl p-[20px] flex flex-col gap-[20px] items-start ${ham?"translate-x-0":"translate-x-full"} transition-transform`}>
+
+      <div className={`lg:hidden absolute left-[15px] top-0 w-full h-full backdrop-blur-xl p-[20px] flex flex-col gap-[20px] items-start ${ham?"translate-x-0":"translate-x-full"} transition-transform`}>
+
         <RxCross2 className='text-white absolute top-[20px] right-[75px] w-[25px] h-[25px]' onClick={()=>setHam(false)} />
 
           <h1 className='text-white font-semibold text-[30px]'>{userData.assistantName}</h1>
@@ -263,7 +265,6 @@ function Home() {
         <button className='min-w-[100px] h-[50px] mt-[30px] bg-white rounded-full text-black font-semibold text-[20px] absolute top-[100px] right-[20px] px-[20px] py-[10px] cursor-pointer hidden lg:block' onClick={() => navigate('/customize')}>
           Customize your Assistant
         </button>
-        ``
         <img src={userData?.assistantImage} alt="" className='h-full object-cover rounded-4xl shadow-lg' />
       </div>
 
