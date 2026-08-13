@@ -51,10 +51,6 @@ function Home() {
     const utterence = new SpeechSynthesisUtterance(text)
     utterence.lang = "en-US";
     const voices = window.speechSynthesis.getVoices();
-    const hindiVoice = voices.find(v => v.lang === 'en-US');
-    if (hindiVoice) {
-      utterence.voice = hindiVoice;
-    }
     isSpeakingRef.current = true
     utterence.onend = () => {
       setAiText("")
