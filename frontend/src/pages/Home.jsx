@@ -225,7 +225,7 @@ function Home() {
 
 
   return (
-    <div className='w-full h-[100vh] bg-gradient-to-t from-[#000000] to-[#08084e] flex flex-col justify-center items-center gap-[15px] overflow-hidden'>
+    <div className='w-full h-[100vh] bg-gradient-to-t from-[#000000] to-[#08084e] flex flex-col justify-center items-center gap-[15px] overflow-hidden max-w-[100%]'>
 
       <CgMenuRight className='lg:hidden text-white absolute top-[20px] right-[10px] w-[25px] h-[25px]' onClick={()=>setHam(true)}/>
       <div className={`absolute lg:hidden top-0 w-full h-full backdrop-blur-xl p-[20px] flex flex-col gap-[20px] items-start ${ham?"translate-x-0":"translate-x-full"} transition-transform overflow-hidden `}>
