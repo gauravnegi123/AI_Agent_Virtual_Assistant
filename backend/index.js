@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 import authRouter from './routes/auth.routes.js';
 import cors from 'cors';
 import userRouter from './routes/user.routes.js';
+import geminiResponse from './gemini.js'
 
 
 const app= express();
@@ -17,10 +18,6 @@ app.use(cookieParser());
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 
-app.get("/", (req, res)=>{
-
-    res.send("Hi Gaurav")
-})
  connectDb();
 
 app.listen(port,()=>{
