@@ -66,25 +66,25 @@ export const askToAssistant = async (req,res)=>{
             case "get-date":
                 return res.json({
                     type,
-                    userinput:gemResult.userInput,
+                    userInput:gemResult.userInput,
                     response: `current date is ${moment().format("DD-MM-YYYY")}`
                 });
             case "get-time":
                 return res.json({
                     type,
-                    userinput:gemResult.userInput,
+                    userInput:gemResult.userInput,
                     response: `current time is ${moment().format("HH:mm a")}`
                 });
             case "get-day":
                 return res.json({
                     type,
-                    userinput:gemResult.userInput,
+                    userInput:gemResult.userInput,
                     response: `today is ${moment().format("dddd")}`
                 });
             case "get-month":
                 return res.json({
                     type,
-                    userinput:gemResult.userInput,
+                    userInput:gemResult.userInput,
                     response: `current month is ${moment().format("MMMM")}`
                 });
                 case "general":
@@ -105,7 +105,7 @@ export const askToAssistant = async (req,res)=>{
 
                     return res.json({
                         type,
-                        userinput:gemResult.userInput,
+                        userInput:gemResult.userInput,
                         response: gemResult.response
                     });
 
