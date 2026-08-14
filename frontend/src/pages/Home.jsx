@@ -203,7 +203,7 @@ function Home() {
       }
     };
 
-    const greeting = new SpeechSynthesisUtterance(`Hello ${userData.name}, bhosdikee ?`);
+    const greeting = new SpeechSynthesisUtterance(`Hello ${userData.name}, mother fucker ?`);
     greeting.lang ='en-US';
     window.speechSynthesis.speak(greeting);
 
