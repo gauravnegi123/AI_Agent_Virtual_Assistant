@@ -116,6 +116,6 @@ export const askToAssistant = async (req,res)=>{
 }
 
         catch(error){
-            return res.status(500).json(error.message)
+            return res.status(500).json(error.response?.status)
         }
     }
