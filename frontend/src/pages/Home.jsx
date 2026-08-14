@@ -225,7 +225,7 @@ function Home() {
 
       <CgMenuRight className='lg:hidden text-white absolute top-[20px] right-[10px] w-[25px] h-[25px]' onClick={()=>setHam(true)}/>
 
-      <div className={`lg:hidden fixed left-15 top-0 w-full h-full backdrop-blur-xl p-[20px] flex flex-col gap-[20px] items-start ${ham?"translate-x-0":"translate-x-full"} transition-transform delay-300 ease-in-out`}>
+      <div className={`lg:hidden fixed left-15 top-0 w-full h-full backdrop-blur-xl p-[20px] flex flex-col gap-[20px] items-start ${ham?"translate-x-0":"translate-x-full"} transition-transform ease-in-out`}>
 
         <RxCross2 className='text-white absolute top-[20px] right-[75px] w-[25px] h-[25px]' onClick={()=>setHam(false)} />
 
